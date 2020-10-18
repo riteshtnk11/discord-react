@@ -49,6 +49,7 @@
   align-items: center;
   color: gray;
   background-color: #2f3135;
+  padding: 10px;
   border-top: 1px solid gray;
 }
 
@@ -69,8 +70,7 @@
   font-size: smaller;
 }
 
-.sidebar__voiceIcons > .MultiSvgIcon-root,
-.sidebar__profileIcons > .MultiSvgIcon-root {
+.sidebar__voiceIcons > .MultiSvgIcon-root {
   padding: 10px;
 }
 
@@ -93,7 +93,12 @@
   color: gray;
 }
 
-.sidebar__profileIcons {
+.sidebar__profileIcons > .MultiSvgIcon-root {
+  padding: 10px;
+}
+
+.sidebar__profileIcons,
+.sidebar__voiceIcons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
