@@ -5,16 +5,26 @@ import AddCircleIcon from "@material-ui/icons/AddCircle";
 import CardGiftcardIcon from "@material-ui/icons/CardGiftcard";
 import GifIcon from "@material-ui/icons/Gif";
 import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
+import Message from "./Message.js";
 
 function Chat() {
   return (
     <div className="chat">
+      {/* Chat header Component */}
       <ChatHeader />
-      <div className="chat__messages"></div>
+      {/* Chat Messages */}
+      <div className="chat__messages">
+        <Message />
+        <Message />
+        <Message />
+        <Message />
+        <Message />
+      </div>
+      {/* Chat Send mennsage */}
       <div className="chat__input">
         <AddCircleIcon fontSize="large" />
         <form>
-          <input placeholder={`Mesage #Testchannel`} />
+          <input placeholder={`Message #Testchannel`} />
           <button className="chat__inputName" type="submit">
             Send Message
           </button>

@@ -1,8 +1,10 @@
+//React components
 import React from "react";
-import "./Sidebar.css";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import AddIcon from "@material-ui/icons/Add";
+//Project Components
 import SidebarChannel from "./SidebarChannel";
+//Css files
+import "./Sidebar.css";
+//Icons
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import CallIcon from "@material-ui/icons/Call";
 import SignalCellularAltIcon from "@material-ui/icons/SignalCellularAlt";
@@ -10,6 +12,8 @@ import { Avatar } from "@material-ui/core";
 import MicIcon from "@material-ui/icons/Mic";
 import HeadsetIcon from "@material-ui/icons/Headset";
 import SettingsIcon from "@material-ui/icons/Settings";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import AddIcon from "@material-ui/icons/Add";
 
 function Sidebar() {
   return (
@@ -19,6 +23,7 @@ function Sidebar() {
         <ExpandMoreIcon />
       </div>
       <div className="sidebar__channels">
+        {/* Channel Header */}
         <div className="sidebar__channelsHeader">
           <div className="sidebar__header">
             <ExpandMoreIcon />
@@ -26,15 +31,15 @@ function Sidebar() {
           </div>
           <AddIcon className="sidebar__addChannel" />
         </div>
+        {/* Channel List */}
         <div className="sidebar__channelsList">
           <SidebarChannel />
           <SidebarChannel />
           <SidebarChannel />
           <SidebarChannel />
           <SidebarChannel />
-
         </div>
-
+        {/* Channel Voice Status */}
         <div className="sidebar__voice">
           <SignalCellularAltIcon
             className="sidebar__voiceIcon"
@@ -49,6 +54,7 @@ function Sidebar() {
             <CallIcon />
           </div>
         </div>
+        {/* Channel Profile */}
         <div className="sidebar__profile">
           <Avatar src="https://avatars3.githubusercontent.com/u/57477426?s=460&u=920a9aa965297510d74cef93973710dc535892fc&v=4" />
           <div className="sidebar__profileInfo">
