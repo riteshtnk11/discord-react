@@ -1,15 +1,18 @@
+//React components
 import React from 'react';
-import './App.css';
+//Project Components
 import Sidebar from "./Sidebar";
 import Chat from "./Chat";
-
+//CSS files
+import './App.css';
+//Icons
 
 function App() {
   return (
     <div className="app">
-      {/**Sidebar */}
+      {/**Sidebar Component */}
       <Sidebar />
-      {/**Chat */}
+      {/**Chat Component */}
       <Chat />
     </div>
   );

@@ -1,10 +1,20 @@
+//React components
 import React from "react";
-import "./SidebarChannel.css";
+//Project Components
 
-function SidebarChannel({id, channel}) {
-  return <div className="sidebarChannel">
-      <h4><span className="sidebarChannel__hash">#</span>My discord</h4>
-  </div>;
+//CSS files
+import "./SidebarChannel.css";
+//Icons
+
+
+function SidebarChannel({ id, channel }) {
+  return (
+    <div className="sidebarChannel">
+      <h4>
+        <span className="sidebarChannel__hash">#</span>My discord
+      </h4>
+    </div>
+  );
 }
 
 export default SidebarChannel;

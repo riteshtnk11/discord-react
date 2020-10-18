@@ -1,6 +1,11 @@
-import { Avatar } from "@material-ui/core";
+//React components
 import React from "react";
+//Project Components
+
+//CSS files
 import "./Message.css";
+//Icons
+import { Avatar } from "@material-ui/core";
 
 function Message() {
   return (
