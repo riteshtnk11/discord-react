@@ -27,10 +27,10 @@ function Chat() {
       </div>
       {/* Chat Send message */}
       <div className="chat__input">
-        <AddCircleIcon fontSize="large" />
+        <AddCircleIcon fontSize="large" />                                                       
         {/* Input form */}
         <form>
-          <input placeholder={`Message #Testchannel`} />
+          <input placeholder='Message #Testchannel' />
           <button className="chat__inputName" type="submit">
             Send Message
           </button>

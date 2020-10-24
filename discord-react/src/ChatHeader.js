@@ -1,6 +1,7 @@
 //React components
 import React from "react";
 //Project Components
+import { auth } from "./firebase";
 
 //CSS files
 import "./ChatHeader.css";
@@ -10,7 +11,7 @@ import EditLocationRoundedIcon from "@material-ui/icons/EditLocationRounded";
 import PeopleAltRoundedIcon from "@material-ui/icons/PeopleAltRounded";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import SendRoundedIcon from "@material-ui/icons/SendRounded";
-import HelpRoundedIcon from "@material-ui/icons/HelpRounded";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 function ChatHeader() {
   return (
@@ -31,7 +32,7 @@ function ChatHeader() {
           <SearchRoundedIcon />
         </div>
         <SendRoundedIcon />
-        <HelpRoundedIcon />
+        <ExitToAppIcon onClick={()=> auth.signOut()}/>
       </div>
     </div>
   );

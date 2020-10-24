@@ -1,7 +1,11 @@
 //React components
 import React from "react";
+import { useSelector } from "react-redux";
+
 //Project Components
 import SidebarChannel from "./SidebarChannel";
+import { selectUser } from "./features/userSlice";
+
 //Css files
 import "./Sidebar.css";
 //Icons
@@ -16,6 +20,8 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AddIcon from "@material-ui/icons/Add";
 
 function Sidebar() {
+  const user = useSelector(selectUser);
+  console.log(user,"This is user");
   return (
     <div className="sidebar">
       <div className="sidebar__top">
@@ -56,7 +62,7 @@ function Sidebar() {
         </div>
         {/* Channel Profile */}
         <div className="sidebar__profile">
-          <Avatar src="https://avatars3.githubusercontent.com/u/57477426?s=460&u=920a9aa965297510d74cef93973710dc535892fc&v=4" />
+          <Avatar src={user.photo}/>
           <div className="sidebar__profileInfo">
             <h3>#Ritesh_Naik</h3>
             <p># This is my id</p>
