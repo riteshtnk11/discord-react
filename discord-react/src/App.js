@@ -5,8 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Sidebar from "./Sidebar";
 import Chat from "./Chat";
 import Login from "./Login";
-import { logout, selectUser } from "./features/userSlice";
-import { login } from "./features/userSlice";
+import { login, logout, selectUser } from "./features/userSlice";
 import { auth } from "./firebase";
 //CSS files
 import "./App.css";
@@ -28,6 +27,7 @@ function App() {
             displayName: authUser.displayName,
           })
         );
+        console.log(dispatch)
       } else {
         dispatch(logout());
       }
