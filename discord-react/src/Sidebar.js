@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 //Project Components
 import SidebarChannel from "./SidebarChannel";
 import { selectUser } from "./features/userSlice";
-
+import db from "./firebase";
 //Css files
 import "./Sidebar.css";
 //Icons
@@ -18,7 +18,7 @@ import HeadsetIcon from "@material-ui/icons/Headset";
 import SettingsIcon from "@material-ui/icons/Settings";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AddIcon from "@material-ui/icons/Add";
-import db from "./firebase";
+
 
 function Sidebar() {
   const user = useSelector(selectUser);
@@ -41,6 +41,7 @@ function Sidebar() {
   const handleAddChannel = () => {
     const channelName = prompt("Add a new channel name");
     if (channelName) {
+      
       db.collection("channels").add({
         channelName: channelName,
       });
